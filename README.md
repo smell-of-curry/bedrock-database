@@ -5,8 +5,9 @@ The database is designed for optimal performance and has a built in queue system
 
 ## Getting started:
 
-First you will need to make a table, you can do this by either adding a key to the `TABLES` object in [tables.ts](src/tables.ts).
-Tables are Type Supported and will return values based on the inputted types.
+First you will need to make a table, you can do this by either adding a key to the `TABLES` object in [tables.ts](src/tables.ts) or
+creating a variable assigned to a `Database` instance. A Cool thing about this database is that it supports full type safety and
+you can predefine the types of the keys and values of the database.
 
 ```ts
 import { Database } from "./Database.ts";
@@ -14,7 +15,7 @@ import { Database } from "./Database.ts";
 const table = new Database<string, any>("test");
 ```
 
-## Setting Data
+## Setting Data:
 
 Setting data is very simple and will send back a promise that can be awaited to let you know when the data is successfully saved in the entities.
 
@@ -29,7 +30,7 @@ async function saveSomeData() {
 }
 ```
 
-## Grabbing Data
+## Grabbing Data:
 
 This database supports Asynchronous calls that can be used for grabbing data at any time (which includes on world load), or you simply
 can grab data from memory.
@@ -48,7 +49,7 @@ Or you can simply call from memory using:
 const value = table.get("someRandomKey");
 ```
 
-## Other Supported Methods
+## Other Supported Methods:
 
 ### Keys:
 
