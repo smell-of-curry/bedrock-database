@@ -42,7 +42,7 @@ table.getSync("someRandomKey").then((v) => {
 
 Or you can simply call from memory using:
 
-> **Warning** \*\*: This can throw errors if data is tried to grab before world load.
+> **Warning**: This can throw errors if data is tried to grab before world load.
 
 ```ts
 const value = table.get("someRandomKey");
@@ -54,7 +54,7 @@ const value = table.get("someRandomKey");
 
 Returns a iterable list of keys that are stored in this table.
 
-> **Warning** \*\*: This can throw errors if data is tried to grab before world load.
+> **Warning**: This can throw errors if data is tried to grab before world load.
 
 ```ts
 table.keys(): any[]
@@ -68,7 +68,7 @@ table.keysSync(): Promise<any[]>
 
 Returns a iterable list of all values that are stored in this table.
 
-> **Warning** \*\*: This can throw errors if data is tried to grab before world load.
+> **Warning**: This can throw errors if data is tried to grab before world load.
 
 ```ts
 table.values(): any[]
@@ -82,7 +82,7 @@ table.valuesSync(): Promise<any[]>
 
 Checks if a key exists on this table and returns boolean.
 
-> **Warning** \*\*: This can throw errors if data is tried to grab before world load.
+> **Warning**: This can throw errors if data is tried to grab before world load.
 
 ```ts
 table.has(key: any): boolean
@@ -96,7 +96,7 @@ table.hasSync(key: any): Promise<boolean>
 
 Returns a Object of all keys and values on this table.
 
-> **Warning** \*\*: This can throw errors if data is tried to grab before world load.
+> **Warning**: This can throw errors if data is tried to grab before world load.
 
 ```ts
 table.collection(): { [any]: any }
