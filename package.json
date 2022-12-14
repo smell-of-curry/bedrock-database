@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@minecraft/server": "^1.1.0-beta.1.19.60-preview.23"
+  }
+}
