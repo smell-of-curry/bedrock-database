@@ -29,8 +29,41 @@ export async function awaitEntitiesLoad(): Promise<void> {
 }
 
 /**
- * Splits a string into chunk sizes
+ * Splits a string into an array of arrays of strings with a maximum length of 32767 characters per string in the innermost array.
+ * @param str The input string to split.
+ * @param maxLength Max Length of the 1st array
+ * @param subArraysMaxLength Max Length of the strings in the 2d array
+ * @returns A two-dimensional array of strings, where each inner array has a maximum length of 2147483647.
  */
-export function chunkString(str: string, length: number): string[] {
-  return str.match(new RegExp(".{1," + length + "}", "g")) ?? [];
+export function splitString(
+  str: string,
+  maxLength: number,
+  subArraysMaxLength: number
+): string[][] {
+  const subStrings: string[] = [];
+  for (let i = 0; i < str.length; i += maxLength) {
+    subStrings.push(str.slice(i, i + maxLength));
+  }
+
+  const subArrays: string[][] = [];
+  for (const subString of subStrings) {
+    subArrays.push(
+      Array.from(
+        { length: Math.ceil(subString.length / subArraysMaxLength) },
+        (_, i) =>
+          subString.slice(i * subArraysMaxLength, (i + 1) * subArraysMaxLength)
+      )
+    );
+  }
+
+  return subArrays;
+}
+
+/**
+ * Concatenates the strings in a two-dimensional array of strings into a single string.
+ * @param strArrays A two-dimensional array of strings to concatenate.
+ * @returns A single string containing the concatenated strings.
+ */
+export function joinStringArrays(strArrays: string[][]): string {
+  return strArrays.reduce((acc, cur) => acc + cur.join(""), "");
 }

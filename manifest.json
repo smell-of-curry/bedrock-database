@@ -1,0 +1,37 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "min_engine_version": [1, 19, 60],
+    "uuid": "dde3805b-21a1-455e-8707-b6345248bd08",
+    "version": [2, 0, 0]
+  },
+  "modules": [
+    {
+      "description": "Data Module",
+      "type": "data",
+      "uuid": "56d6bae8-69f1-4227-a2c2-75caddb4e8d3",
+      "version": [2, 0, 0]
+    },
+    {
+      "description": "Script API Module",
+      "language": "javascript",
+      "type": "script",
+      "uuid": "ec8cf691-28e0-40d6-980c-8506cd5a4742",
+      "version": [2, 0, 0],
+      "entry": "scripts/index.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.1.0-beta"
+    }
+  ],
+  "metadata": {
+    "authors": ["Smell of curry"],
+    "license": "MIT",
+    "url": "https://github.com/smell-of-curry/rubedo"
+  }
+}

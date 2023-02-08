@@ -1,5 +1,13 @@
 {
   "devDependencies": {
-    "@minecraft/server": "^1.1.0-beta.1.19.60-preview.23"
+    "@minecraft/server": "^1.1.0-beta.1.19.60-stable"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js dev"
+  },
+  "dependencies": {
+    "esbuild": "^0.15.9",
+    "fs-extra": "^11.1.0"
   }
 }

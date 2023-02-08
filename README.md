@@ -1,4 +1,4 @@
-# Bedrock Database
+# Bedrock Database 2.0
 
 A Minecraft Bedrock asynchronous database with unlimited storage. This database works on Entity Inventory's.
 The database is designed for optimal performance and has a built in queue system for async calls.

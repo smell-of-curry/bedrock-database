@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "target": "ES2021",
+    "lib": ["ES2021", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "outDir": "scripts",
+    "emitDeclarationOnly": true,
+    "declaration": true
+  },
+  "include": ["src"],
+  "exclude": ["scripts", "node_modules"]
+}
