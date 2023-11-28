@@ -1,13 +1,32 @@
 {
-  "devDependencies": {
-    "@minecraft/server": "^1.1.0-beta.1.19.60-stable"
+  "name": "bedrock-database",
+  "description": "A Infinite Storage Minecraft Bedrock Database",
+  "version": "3.0.0",
+  "main": "scripts/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+hhttps://github.com/smell-of-curry/bedrock-database.git"
   },
+  "keywords": [
+    "mcbe",
+    "addons",
+    "database",
+    "script-api"
+  ],
+  "author": "Smell of curry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smell-of-curry/bedrock-database/issues"
+  },
+  "homepage": "https://github.com/smell-of-curry/bedrock-database#readme",
   "scripts": {
     "build": "node build.js",
     "dev": "node build.js dev"
   },
-  "dependencies": {
-    "esbuild": "^0.15.9",
-    "fs-extra": "^11.1.0"
+  "devDependencies": {
+    "@minecraft/server": "^1.7.0-beta.1.20.40-stable",
+    "@types/fs-extra": "^9.0.13",
+    "esbuild": "^0.15.18",
+    "fs-extra": "^10.1.0"
   }
 }

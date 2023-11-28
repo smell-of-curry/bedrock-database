@@ -1,6 +1,6 @@
-# Bedrock Database 2.0
+# Bedrock Database 3.0
 
-A Minecraft Bedrock asynchronous database with unlimited storage. This database works on Entity Inventory's.
+A Minecraft Bedrock asynchronous database with unlimited storage. This database works on Dynamic Properties.
 The database is designed for optimal performance and has a built in queue system for async calls.
 
 ## Getting started:
@@ -12,7 +12,7 @@ you can predefine the types of the keys and values of the database.
 ```ts
 import { Database } from "./Database.ts";
 
-const table = new Database<string, any>("test");
+const table = new Database<any>("test");
 ```
 
 ## Setting Data:

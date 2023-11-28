@@ -16,13 +16,9 @@ esbuild
     outfile: "scripts/index.js",
     minify: !isDev,
     platform: "neutral",
-    sourcemap: true,
     watch: isDev,
     external: [
       "@minecraft/server",
-      "@minecraft/server-ui",
-      "@minecraft/server-net",
-      "@minecraft/server-admin",
     ],
     legalComments: isDev ? "none" : "none",
   })
